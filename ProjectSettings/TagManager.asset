@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Jump
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 309667833
+    locked: 0
+  - name: Ground
+    uniqueID: 670801393
+    locked: 0
+  - name: vachKeDuong
+    uniqueID: 3625548207
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: titles
+    uniqueID: 4270916373
+    locked: 0
+  - name: Skidmarks
+    uniqueID: 1004868713
+    locked: 0
+  - name: Particle
+    uniqueID: 3985500515
+    locked: 0
+  - name: Flying
+    uniqueID: 3427155005
+    locked: 0
