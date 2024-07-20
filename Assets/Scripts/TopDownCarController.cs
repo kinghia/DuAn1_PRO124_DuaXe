@@ -36,6 +36,8 @@ public class TopDownCarController : MonoBehaviour
         carRigidbody2D = GetComponent<Rigidbody2D>();
         carCollider = GetComponentInChildren<Collider2D>();
         carSfxHandler = GetComponent<CarSfxHandler>();
+
+        
     }
 
     // Update is called once per frame
@@ -127,19 +129,22 @@ public class TopDownCarController : MonoBehaviour
         accelerationInput = inputVector.y;
     }
 
-    internal float GetVelocityMagnitude()
+    public float GetVelocityMagnitude()
     {
-        throw new NotImplementedException();
+        return carRigidbody2D.velocity.magnitude;
     }
 
     public void Jump(float jumpHeightScale, float jumpPushScale)
     {
         if (!isJumping)
-            StartCoroutine(JumpCo(jumpHeightScale, jumpPushScale));
+        
+          StartCoroutine(JumpCo(jumpHeightScale, jumpPushScale));
+              
     }
 
     private IEnumerator JumpCo(float jumpHeightScale, float jumpPushScale)
     {
+        
         isJumping = true;
 
         float jumpStartTime = Time.time;
