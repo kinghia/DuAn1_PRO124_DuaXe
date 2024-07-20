@@ -1702,6 +1702,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5248318367496277202, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248318367496277202, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c2aa94c121ea5f4f9ba5f67f9d8686b, type: 3}
+    - target: {fileID: 5248318367496277202, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248318367496277202, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3847291663791727986, guid: 489a273dad12bdc4da759075f60382b5, type: 2}
+    - target: {fileID: 5248318367496277202, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322709084072125549, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a4b79e68c06116f4eb2d41abdc522bcf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
 --- !u!1 &1905952121

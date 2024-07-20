@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Racing TopDownCar.sln"
+    "dotnet.defaultSolution": "DuAn1_PRO124_DuaXe.sln"
 }
