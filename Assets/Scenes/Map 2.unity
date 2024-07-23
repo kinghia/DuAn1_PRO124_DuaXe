@@ -1797,19 +1797,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 49431051730457163, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 384.8421
+      value: 425.9302
       objectReference: {fileID: 0}
     - target: {fileID: 49431051730457163, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 69.0583
+      value: 105.1837
       objectReference: {fileID: 0}
     - target: {fileID: 49431051730457163, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -737.4219
+      value: -669.4331
       objectReference: {fileID: 0}
     - target: {fileID: 49431051730457163, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -449
+      value: -453.30283
       objectReference: {fileID: 0}
     - target: {fileID: 1501049675638247262, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_Pivot.x
@@ -1894,22 +1894,6 @@ PrefabInstance:
     - target: {fileID: 1501049675638247262, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419003346842796823, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7254312945395007268, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
-      propertyPath: m_Text
-      value: SpeedText
-      objectReference: {fileID: 0}
-    - target: {fileID: 7254312945395007268, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: be9d79db7b7ab1547bf81be581d772af, type: 3}
-    - target: {fileID: 7254312945395007268, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7828353864955651091, guid: 660acbfde8fee4240859eb3cb60ebd25, type: 3}
       propertyPath: m_Name
