@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Jump
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -57,9 +58,9 @@ TagManager:
   - name: Skidmarks
     uniqueID: 1004868713
     locked: 0
-  - name: Particle
-    uniqueID: 3985500515
-    locked: 0
   - name: Flying
     uniqueID: 3427155005
+    locked: 0
+  - name: Particle
+    uniqueID: 3985500515
     locked: 0
