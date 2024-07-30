@@ -27,6 +27,9 @@ public class TopDownCarController : MonoBehaviour
     float velocityVsUp = 0;
 
     bool isJumping = false;
+    private float totalDistance = 0f;
+    private float totalTime = 0f;
+    private Vector2 lastPosition;
 
     Rigidbody2D carRigidbody2D;
     Collider2D carCollider;
@@ -37,7 +40,9 @@ public class TopDownCarController : MonoBehaviour
         carCollider = GetComponentInChildren<Collider2D>();
         carSfxHandler = GetComponent<CarSfxHandler>();
 
-        
+        lastPosition = transform.position;
+
+
     }
 
     // Update is called once per frame
@@ -53,6 +58,22 @@ public class TopDownCarController : MonoBehaviour
         KillOrthogonalVelocity();
 
         ApplySteering();
+
+        UpdateDistanceAndTime();
+    }
+    void UpdateDistanceAndTime()
+    {
+        // Tính quãng đường đi được trong khung hình hiện tại
+        float distanceThisFrame = Vector2.Distance(transform.position, lastPosition);
+
+        // Cập nhật tổng quãng đường
+        totalDistance += distanceThisFrame;
+
+        // Cập nhật tổng thời gian
+        totalTime += Time.fixedDeltaTime;
+
+        // Cập nhật vị trí cuối cùng
+        lastPosition = transform.position;
     }
 
     void ApplyEngineForce()
@@ -98,6 +119,12 @@ public class TopDownCarController : MonoBehaviour
         carRigidbody2D.velocity = forwardVelocity + rightVelocity * driftFactor;
     }
 
+    public float GetAverageSpeed()
+    {
+        // Tính tốc độ trung bình
+        return totalDistance / totalTime;
+    
+    }
     float GetLateralVelocity()
     {
         return Vector2.Dot(transform.right, carRigidbody2D.velocity);

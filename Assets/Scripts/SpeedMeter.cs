@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,15 +16,13 @@ public class SpeedMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // toc do cua xe tra ve toc do don vi m/s
-        float speed = carController.GetVelocityMagnitude();
+        if (carController != null && speedText != null)
+        {
+            // Lấy tốc độ trung bình từ carController
+            float averageSpeed = carController.GetAverageSpeed();
 
-        // chuyen doi toc do tu m/s sang km/h
-        float speedKmh = speed * 2.5f;
-
-        // cap nhat toc do
-        speedText.text = speedKmh.ToString("F1") + " km/h";
-
-
+            // Hiển thị tốc độ trung bình
+            speedText.text = " " + averageSpeed.ToString("F2") + " km/h";
+        }
     }
 }

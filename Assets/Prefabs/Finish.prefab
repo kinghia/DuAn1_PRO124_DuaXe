@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039122551119668952}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.10727512, w: 0.9942294}
+  m_LocalRotation: {x: 0, y: 0, z: -0.10727928, w: 0.9942289}
   m_LocalPosition: {x: -263.1, y: -52.4, z: 0}
   m_LocalScale: {x: 1.5274954, y: 1.5274954, z: 1.5274954}
   m_ConstrainProportionsScale: 0
@@ -143,4 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d4b45b5b2bdfd4a937e06bf48ccd08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Map 2
+  finishPanel: {fileID: 0}
+  winnerText: {fileID: 0}
+  playerFinishTimeText: {fileID: 0}
