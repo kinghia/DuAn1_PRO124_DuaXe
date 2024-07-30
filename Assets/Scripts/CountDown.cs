@@ -7,7 +7,7 @@ public class CountDown : MonoBehaviour
 {
     public Text countdownText;
     public TopDownCarController playerCarController1;
-    public TopDownCarController playerCarController2;
+   
     public AIController[] aiCarControllers;
     public AI2Controller[] aiCarControllers2;  // Thêm m?ng AIController2
 
@@ -20,7 +20,7 @@ public class CountDown : MonoBehaviour
     {
         // Disable car controls initially
         playerCarController1.enabled = false;
-        playerCarController2.enabled = false;
+       
 
 
         foreach (var aiController in aiCarControllers)
@@ -47,7 +47,7 @@ public class CountDown : MonoBehaviour
 
         // Enable car controls
         playerCarController1.enabled = true;
-        playerCarController2.enabled = true;
+        
 
 
         foreach (var aiController in aiCarControllers)

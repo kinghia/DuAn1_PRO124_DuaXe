@@ -26,4 +26,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TongKet.unity
     guid: 968fc05ba5ed53e47b0738cc1fd03a54
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: c4906a33c5e00db468d6d6ae129b63a8
+  - enabled: 1
+    path: Assets/Scenes/Map du phong.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TongKet.unity
+    guid: 968fc05ba5ed53e47b0738cc1fd03a54
+  - enabled: 1
+    path: Assets/Scenes/Map 2.unity
+    guid: f79e2f6dcb88fd04886d52504cb2e6a7
+  - enabled: 1
+    path: Assets/Scenes/Map 3.unity
+    guid: 12f6cd6e9e663954b95624298ad548cf
+  - enabled: 1
+    path: Assets/Scenes/Map 4.unity
+    guid: 14869e6ea11d9483c9930c67f3edaf12
   m_configObjects: {}
