@@ -5532,7 +5532,7 @@ GameObject:
   - component: {fileID: 880936020271060515}
   - component: {fileID: 1423803465228027984}
   m_Layer: 0
-  m_Name: BOT 1
+  m_Name: BOT 2
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
