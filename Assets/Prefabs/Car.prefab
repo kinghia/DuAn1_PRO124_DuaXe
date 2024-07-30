@@ -5611,9 +5611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driftFactor: 0.95
-  accelerationFactor: 30
+  accelerationFactor: 50
   turnFactor: 3.5
-  maxSpeed: 30
+  maxSpeed: 50
   carSpriteRenderer: {fileID: 4556405354975051146}
   carShadowRenderer: {fileID: 2722855381563209920}
   jumpCurve:
@@ -16122,7 +16122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8466439648488927757}
-  - component: {fileID: 2584920124592113738}
+  - component: {fileID: 2581881600659318921}
   m_Layer: 0
   m_Name: P1
   m_TagString: Player1
@@ -16145,7 +16145,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5036364962799844269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &2584920124592113738
+--- !u!60 &2581881600659318921
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
