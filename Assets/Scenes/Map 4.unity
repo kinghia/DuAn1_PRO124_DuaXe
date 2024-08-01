@@ -4855,6 +4855,7 @@ GameObject:
   - component: {fileID: 945161783}
   - component: {fileID: 945161782}
   - component: {fileID: 945161785}
+  - component: {fileID: 945161786}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4949,6 +4950,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 341345804}
+--- !u!114 &945161786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945161781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e4b240d7cc56b48a310ac9fdd0e9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carLapCounters: []
 --- !u!1001 &956719624
 PrefabInstance:
   m_ObjectHideFlags: 0
