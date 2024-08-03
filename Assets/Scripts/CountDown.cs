@@ -18,11 +18,6 @@ public class CountDown : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
-        // Disable car controls initially
-        playerCarController1.enabled = false;
-        
-
-
         foreach (var aiController in aiCarControllers)
         {
             aiController.enabled = false;
@@ -31,6 +26,10 @@ public class CountDown : MonoBehaviour
         {
             aiController2.enabled = false;
         }
+
+        if(playerCarController1 == null) yield return new WaitForSeconds(0.1f);
+        // Disable car controls initially
+        playerCarController1.enabled = false;
 
         // Display countdown
         countdownText.text = "3";

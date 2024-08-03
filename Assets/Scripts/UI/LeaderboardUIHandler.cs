@@ -9,9 +9,22 @@ public class LeaderboardUIHandler : MonoBehaviour
     public GameObject leaderboardItemPrefab;
 
     SetLeaderboardItemInfo[] setLeaderboardItemInfo;
+
     
-    void Awake ()
+    public void Awake() {
+        UpdateLeaderBoard();
+    }
+
+    public void UpdateList(List<CarLapCounter> lapCounters)
     {
+        for (int i =0; i < lapCounters.Count; i++)
+        {
+            setLeaderboardItemInfo[i].SetDriverNameText(lapCounters[i].gameObject.name);
+        }
+    }
+
+    public void UpdateLeaderBoard() {
+
         VerticalLayoutGroup leaderboardLayoutGroup = GetComponentInChildren<VerticalLayoutGroup>();
 
         CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
@@ -24,20 +37,7 @@ public class LeaderboardUIHandler : MonoBehaviour
 
             setLeaderboardItemInfo[i] = leaderboardInfoGameObject.GetComponent<SetLeaderboardItemInfo>();
 
-            setLeaderboardItemInfo[i].SetPositionText($"{i + i}.");
-        }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    public void UpdateList(List<CarLapCounter> lapCounters)
-    {
-        for (int i =0; i < lapCounters.Count; i++)
-        {
-            setLeaderboardItemInfo[i].SetDriverNameText(lapCounters[i].gameObject.name);
+            setLeaderboardItemInfo[i].SetPositionText($"{i + 1}.");
         }
     }
 }

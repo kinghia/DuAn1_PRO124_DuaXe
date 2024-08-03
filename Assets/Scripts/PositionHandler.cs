@@ -9,7 +9,12 @@ public class PositionHandler : MonoBehaviour
     LeaderboardUIHandler leaderboardUIHandler;
     public List<CarLapCounter> carLapCounters = new List<CarLapCounter>();
 
-    private void Awake()
+    public void Awake()
+    {
+        UpdatePositionHandler();
+    }
+
+    public void UpdatePositionHandler()
     {
         CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
 

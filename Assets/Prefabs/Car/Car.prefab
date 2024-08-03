@@ -5611,9 +5611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driftFactor: 0.95
-  accelerationFactor: 50
+  accelerationFactor: 45
   turnFactor: 3.5
-  maxSpeed: 50
+  maxSpeed: 40
   carSpriteRenderer: {fileID: 4556405354975051146}
   carShadowRenderer: {fileID: 2722855381563209920}
   jumpCurve:
