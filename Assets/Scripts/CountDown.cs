@@ -10,6 +10,7 @@ public class CountDown : MonoBehaviour
 
     public AIController[] aiCarControllers;
     public AI2Controller[] aiCarControllers2;  // Th�m m?ng AIController2
+    public AI3Controller[] aiCarControllers3;
 
     void Start()
     {
@@ -26,6 +27,11 @@ public class CountDown : MonoBehaviour
         {
             aiController2.enabled = false;
         }
+        foreach (var aiController3 in aiCarControllers3)
+        {
+            aiController3.enabled = false;
+        }
+
 
         if(playerCarController1 == null) yield return new WaitForSeconds(0.1f);
         // Disable car controls initially
@@ -56,6 +62,10 @@ public class CountDown : MonoBehaviour
         foreach (var aiController2 in aiCarControllers2)  // K�ch ho?t AIController2
         {
             aiController2.enabled = true;
+        }
+        foreach (var aiController3 in aiCarControllers3)
+        {
+            aiController3.enabled = true;
         }
     }
 }
