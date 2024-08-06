@@ -23,7 +23,7 @@ public class CountDown : MonoBehaviour
         {
             aiController.enabled = false;
         }
-        foreach (var aiController2 in aiCarControllers2)  // V� hi?u h�a AIController2
+        foreach (var aiController2 in aiCarControllers2)  // Vô hiệu hoá AIController2
         {
             aiController2.enabled = false;
         }
@@ -59,7 +59,7 @@ public class CountDown : MonoBehaviour
         {
             aiController.enabled = true;
         }
-        foreach (var aiController2 in aiCarControllers2)  // K�ch ho?t AIController2
+        foreach (var aiController2 in aiCarControllers2)  // Kích hoạtt AIController2
         {
             aiController2.enabled = true;
         }
