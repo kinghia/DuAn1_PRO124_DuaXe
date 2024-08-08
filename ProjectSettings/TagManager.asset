@@ -8,6 +8,8 @@ TagManager:
   - CheckPoint
   - Player1
   - Player2
+  - Untagged1
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

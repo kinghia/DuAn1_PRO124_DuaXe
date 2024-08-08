@@ -7,9 +7,14 @@ public class CountDown : MonoBehaviour
 {
     public Text countdownText;
     public TopDownCarController playerCarController1;
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> 27741d2402e3e1923d62294c043e7cbaa7292dae
     public AIController[] aiCarControllers;
-    public AI2Controller[] aiCarControllers2;  // Thêm m?ng AIController2
+    public AI2Controller[] aiCarControllers2;  // Thï¿½m m?ng AIController2
+    public AI3Controller[] aiCarControllers3;
 
     void Start()
     {
@@ -18,19 +23,31 @@ public class CountDown : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
+<<<<<<< HEAD
         // Disable car controls initially
         playerCarController1.enabled = false;
        
 
 
+=======
+>>>>>>> 27741d2402e3e1923d62294c043e7cbaa7292dae
         foreach (var aiController in aiCarControllers)
         {
             aiController.enabled = false;
         }
-        foreach (var aiController2 in aiCarControllers2)  // Vô hi?u hóa AIController2
+        foreach (var aiController2 in aiCarControllers2)  // VÃ´ hiá»‡u hoÃ¡ AIController2
         {
             aiController2.enabled = false;
         }
+        foreach (var aiController3 in aiCarControllers3)
+        {
+            aiController3.enabled = false;
+        }
+
+
+        if(playerCarController1 == null) yield return new WaitForSeconds(0.1f);
+        // Disable car controls initially
+        playerCarController1.enabled = false;
 
         // Display countdown
         countdownText.text = "3";
@@ -54,9 +71,13 @@ public class CountDown : MonoBehaviour
         {
             aiController.enabled = true;
         }
-        foreach (var aiController2 in aiCarControllers2)  // Kích ho?t AIController2
+        foreach (var aiController2 in aiCarControllers2)  // KÃ­ch hoáº¡tt AIController2
         {
             aiController2.enabled = true;
+        }
+        foreach (var aiController3 in aiCarControllers3)
+        {
+            aiController3.enabled = true;
         }
     }
 }

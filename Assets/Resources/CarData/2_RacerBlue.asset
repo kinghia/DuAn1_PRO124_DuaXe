@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77721783d9e636043808fb6563b24625, type: 3}
+  m_Name: 2_RacerBlue
+  m_EditorClassIdentifier: 
+  carUniqueID: 1
+  carUISprite: {fileID: 21300000, guid: d7596c1677528fe41a9fc97f45fd11c8, type: 3}
+  carPrefab: {fileID: 3796758365756144251, guid: 5fef59a5e0eff8341af8f2aa3daab1c2, type: 3}
