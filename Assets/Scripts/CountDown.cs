@@ -12,6 +12,15 @@ public class CountDown : MonoBehaviour
     public AI2Controller[] aiCarControllers2;  // Th�m m?ng AIController2
     public AI3Controller[] aiCarControllers3;
 
+    public AudioSource thereeCoutdown;
+    public AudioSource twoCountdown;
+    public AudioSource oneCountdonw;
+    public AudioSource goCountdown;
+
+    public GameObject gameManager;
+    public GameObject fnishObs;
+
+
     void Start()
     {
         StartCoroutine(CountdownToStart());
@@ -33,18 +42,23 @@ public class CountDown : MonoBehaviour
         }
 
 
-        if(playerCarController1 == null) yield return new WaitForSeconds(0.1f);
+        if(playerCarController1 == null) yield return new WaitForSeconds(0.000001f);
         // Disable car controls initially
         playerCarController1.enabled = false;
+        gameManager.SetActive(false);
 
         // Display countdown
         countdownText.text = "3";
+        thereeCoutdown.Play();
         yield return new WaitForSeconds(1f);
         countdownText.text = "2";
+        twoCountdown.Play();
         yield return new WaitForSeconds(1f);
         countdownText.text = "1";
+        oneCountdonw.Play();
         yield return new WaitForSeconds(1f);
         countdownText.text = "Go!";
+        goCountdown.Play();
         yield return new WaitForSeconds(1f);
 
         // Hide countdown text
@@ -52,6 +66,9 @@ public class CountDown : MonoBehaviour
 
         // Enable car controls
         playerCarController1.enabled = true;
+        gameManager.SetActive(true);
+        fnishObs.SetActive(true);
+
         
 
 

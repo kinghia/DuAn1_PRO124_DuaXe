@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,12 +24,14 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
+            AudioListener.pause = true;
         }
 
         if (!isPaused)
         {
             elapsedTime += Time.deltaTime;
             UpdateTimeText();
+            AudioListener.pause = false;
         }
     }
     void UpdateTimeText()
@@ -58,6 +61,16 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
         pausePanel.SetActive(false);
+        AudioListener.pause = false;
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
+    }
+    public void ExitMenu()
+    {
+        SceneManager.LoadScene("Start");
+    }
 }

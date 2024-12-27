@@ -1,43 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LeaderboardUIHandler : MonoBehaviour
 {
-    public GameObject leaderboardItemPrefab;
+    public GameObject leaderboardItemPrefab; // Prefab của một mục leaderboard
+    private List<SetLeaderboardItemInfo> setLeaderboardItemInfoList = new List<SetLeaderboardItemInfo>();
 
-    SetLeaderboardItemInfo[] setLeaderboardItemInfo;
-
-    
-    public void Awake() {
+    public void Awake()
+    {
         UpdateLeaderBoard();
     }
 
     public void UpdateList(List<CarLapCounter> lapCounters)
     {
-        for (int i =0; i < lapCounters.Count; i++)
+        // Đảm bảo số lượng mục khớp với danh sách lapCounters
+        if (lapCounters.Count != setLeaderboardItemInfoList.Count)
         {
-            setLeaderboardItemInfo[i].SetDriverNameText(lapCounters[i].gameObject.name);
+            Debug.LogWarning("Lap counter list size does not match leaderboard size. Updating leaderboard...");
+            UpdateLeaderBoard();
+        }
+
+        // Gán tên driver cho từng mục
+        for (int i = 0; i < lapCounters.Count; i++)
+        {
+            if (setLeaderboardItemInfoList[i] != null)
+            {
+                setLeaderboardItemInfoList[i].SetDriverNameText(lapCounters[i].gameObject.name);
+            }
         }
     }
 
-    public void UpdateLeaderBoard() {
-
+    public void UpdateLeaderBoard()
+    {
+        // Lấy VerticalLayoutGroup chứa các mục leaderboard
         VerticalLayoutGroup leaderboardLayoutGroup = GetComponentInChildren<VerticalLayoutGroup>();
 
+        // Dọn dẹp danh sách cũ
+        foreach (Transform child in leaderboardLayoutGroup.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        setLeaderboardItemInfoList.Clear();
+
+        // Tìm tất cả CarLapCounter trên màn chơi
         CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
 
-        setLeaderboardItemInfo = new SetLeaderboardItemInfo[carLapCounterArray.Length];
-
-        for (int i = 0; i < carLapCounterArray.Length; i++ )
+        // Tạo các mục leaderboard mới
+        for (int i = 0; i < carLapCounterArray.Length; i++)
         {
             GameObject leaderboardInfoGameObject = Instantiate(leaderboardItemPrefab, leaderboardLayoutGroup.transform);
 
-            setLeaderboardItemInfo[i] = leaderboardInfoGameObject.GetComponent<SetLeaderboardItemInfo>();
-
-            setLeaderboardItemInfo[i].SetPositionText($"{i + 1}.");
+            // Kiểm tra và thêm thành phần SetLeaderboardItemInfo
+            SetLeaderboardItemInfo itemInfo = leaderboardInfoGameObject.GetComponent<SetLeaderboardItemInfo>();
+            if (itemInfo != null)
+            {
+                itemInfo.SetPositionText($"{i + 1}.");
+                setLeaderboardItemInfoList.Add(itemInfo);
+            }
+            else
+            {
+                Debug.LogError("Leaderboard item prefab is missing SetLeaderboardItemInfo component!");
+                Destroy(leaderboardInfoGameObject); // Hủy nếu không hợp lệ
+            }
         }
     }
 }

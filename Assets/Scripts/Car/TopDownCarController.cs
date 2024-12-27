@@ -10,6 +10,7 @@ public class TopDownCarController : MonoBehaviour
     public float accelerationFactor = 30.0f;
     public float turnFactor = 3.5f;
     public float maxSpeed = 20;
+    
 
     [Header("Sprites")]
     public SpriteRenderer carSpriteRenderer;
@@ -36,13 +37,17 @@ public class TopDownCarController : MonoBehaviour
     CarSfxHandler carSfxHandler;
     void Start()
     {
-        carRigidbody2D = GetComponent<Rigidbody2D>();
+        //carRigidbody2D = GetComponent<Rigidbody2D>();
         carCollider = GetComponentInChildren<Collider2D>();
         carSfxHandler = GetComponent<CarSfxHandler>();
 
         lastPosition = transform.position;
 
 
+    }
+    void Awake()
+    {
+        carRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -116,8 +121,14 @@ public class TopDownCarController : MonoBehaviour
     public float GetAverageSpeed()
     {
         // Tính tốc độ trung bình
-        return totalDistance / totalTime;
-    
+        if (totalTime > 0)
+        {
+            return totalDistance / totalTime; // Tính tốc độ trung bình
+        }
+        else
+        {
+            return 0f; // Tránh chia cho 0
+        }
     }
     float GetLateralVelocity()
     {

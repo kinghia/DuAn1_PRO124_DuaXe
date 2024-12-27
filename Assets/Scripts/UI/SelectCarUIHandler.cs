@@ -19,7 +19,7 @@ public class SelectCarUIHandler : MonoBehaviour
     CarUIHandler carUIHandler = null;
 
     int selectedCarIndex = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
         //Tải dữ liệu xe
@@ -28,7 +28,7 @@ public class SelectCarUIHandler : MonoBehaviour
         StartCoroutine(SpawnCarCO(true));
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -78,10 +78,12 @@ public class SelectCarUIHandler : MonoBehaviour
         PlayerPrefs.SetInt("P2SelectedCarID", carDatas[selectedCarIndex].CarUniqueID);
         PlayerPrefs.SetInt("P3SelectedCarID", carDatas[selectedCarIndex].CarUniqueID);
         PlayerPrefs.SetInt("P4SelectedCarID", carDatas[selectedCarIndex].CarUniqueID);
+        PlayerPrefs.SetInt("P5SelectedCarID", carDatas[selectedCarIndex].CarUniqueID);
+        PlayerPrefs.SetInt("P6SelectedCarID", carDatas[selectedCarIndex].CarUniqueID);
 
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene("Map 1");
+        SceneManager.LoadScene("Swipe Level Menu");
     }
 
     IEnumerator SpawnCarCO(bool isCarAppearingOnRightSide)

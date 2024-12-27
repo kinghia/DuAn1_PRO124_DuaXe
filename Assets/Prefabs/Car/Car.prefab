@@ -5532,7 +5532,7 @@ GameObject:
   - component: {fileID: 880936020271060515}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged1
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5546,7 +5546,7 @@ Transform:
   m_GameObject: {fileID: 3796758365756144251}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.6, y: 17.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10947,7 +10947,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -745306455550508162, guid: 489a273dad12bdc4da759075f60382b5, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c69a7de48937cd44baef0d5e37bb0404, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0541e8ad2cc36014eb5c28cdcf50e275, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16122,10 +16122,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8466439648488927757}
-  - component: {fileID: 2581881600659318921}
+  - component: {fileID: 5447425810522382182}
   m_Layer: 0
-  m_Name: P1
-  m_TagString: Player1
+  m_Name: You
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16145,8 +16145,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5036364962799844269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &2581881600659318921
-PolygonCollider2D:
+--- !u!70 &5447425810522382182
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16178,55 +16178,5 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.17123413, y: 2.193283}
-      - {x: -0.0031433105, y: 2.2236633}
-      - {x: -0.19073486, y: 2.2100372}
-      - {x: -0.6881781, y: 2.168537}
-      - {x: -0.794281, y: 2.109848}
-      - {x: -0.86517334, y: 1.9829102}
-      - {x: -0.9180298, y: 1.8067093}
-      - {x: -0.92160034, y: 1.1253281}
-      - {x: -0.90405273, y: 1.1211243}
-      - {x: -0.9055176, y: 1.0020447}
-      - {x: -0.8683777, y: 0.97714996}
-      - {x: -0.86968994, y: -0.50302887}
-      - {x: -0.92176956, y: -0.5863608}
-      - {x: -0.9260559, y: -0.72919464}
-      - {x: -0.8800354, y: -0.7182312}
-      - {x: -0.8772278, y: -0.79558563}
-      - {x: -0.9330139, y: -0.8231964}
-      - {x: -0.92681885, y: -1.5575867}
-      - {x: -0.853302, y: -1.5615616}
-      - {x: -0.8196106, y: -1.9199677}
-      - {x: -0.692688, y: -2.121254}
-      - {x: -0.36923218, y: -2.188202}
-      - {x: -0.036224365, y: -2.2118301}
-      - {x: 0.258667, y: -2.1878204}
-      - {x: 0.6897278, y: -2.1274567}
-      - {x: 0.815155, y: -1.9401245}
-      - {x: 0.8400574, y: -1.5711517}
-      - {x: 0.9038086, y: -1.5553589}
-      - {x: 0.9265137, y: -1.4795837}
-      - {x: 0.9236008, y: -0.8540685}
-      - {x: 0.86779785, y: -0.7936096}
-      - {x: 0.8717041, y: -0.7319565}
-      - {x: 0.9178772, y: -0.7213135}
-      - {x: 0.9323425, y: -0.5688324}
-      - {x: 0.8768616, y: -0.518692}
-      - {x: 0.87323, y: 0.9773636}
-      - {x: 0.91537476, y: 1.0085068}
-      - {x: 0.9156189, y: 1.7038803}
-      - {x: 0.8872986, y: 1.9770279}
-      - {x: 0.7602911, y: 2.1508904}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 1.77, y: 4.55}
+  m_Direction: 0

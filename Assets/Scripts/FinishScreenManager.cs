@@ -29,4 +29,5 @@ public class FinishScreenManager : MonoBehaviour
             SceneManager.LoadScene(nextSceneIndex);
         }
     }
+    
 }

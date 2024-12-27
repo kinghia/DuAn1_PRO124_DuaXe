@@ -28,6 +28,7 @@ public class CarSfxHandler : MonoBehaviour
     void Start()
     {
         audioMixer.SetFloat("SFXVolume", 0.5f);
+        AudioListener.pause = false;
     }
 
     // Update is called once per frame
@@ -86,7 +87,8 @@ public class CarSfxHandler : MonoBehaviour
 
         float volume = relativeVelocity * 0.1f;
 
-        //carHitAudioSource.pitch = Random.Range(0.95f, 1.05f);
+        carHitAudioSource.volume = Mathf.Clamp(volume, 0.0f, 1.0f);
+        carHitAudioSource.pitch = UnityEngine.Random.Range(0.95f, 1.05f);
         carHitAudioSource.volume = volume;
 
         if (!carHitAudioSource.isPlaying)

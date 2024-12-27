@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: f0bdc8e6b85349d4c82a278d414f469c
   - enabled: 1
+    path: Assets/Scenes/Swipe Level Menu.unity
+    guid: 3e389d219fcc3d14d81297339a1a82ad
+  - enabled: 1
     path: Assets/Scenes/Map 1.unity
     guid: 49d2b48cdbc76e448a7c27102f294572
   - enabled: 1

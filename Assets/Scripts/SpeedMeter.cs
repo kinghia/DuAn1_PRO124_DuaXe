@@ -10,7 +10,7 @@ public class SpeedMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedText = GameObject.Find("SpeedText").GetComponent<Text>();
     }
 
     // Update is called once per frame
